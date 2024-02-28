@@ -13,10 +13,10 @@
 			let max = Number.MIM_SAFE_INTEGER;
 			let max2 = Number.MIN_SAFE_INTEGER;
 			if(arr.length<2){
-				return Infinity;
+				return undefined;
 			}
 			else if(arr.every(val, i, arr)=>val===arr[0]){
-				return Infinity
+				return arr[0];
 			}
 			 else{
 				    max = Math.max.apply(null, arr)
