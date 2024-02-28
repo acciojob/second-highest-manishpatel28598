@@ -18,15 +18,12 @@
 			else if(arr.every(val, i, arr)=>val===arr[0]){
 				return Infinity
 			}
-			else{
-				for(let i of arr){
-					if(i>max){
-						max=i;
-						max2 = max;
-					}
-				}
-				return max2;
-			}
+			 else{
+				    max = Math.max.apply(null, arr)
+				    arr.splice(arr.indexOf(max), 1)
+				    max2 = Math.max.apply(null, arr)
+				    }
+			return max2;
 		}
 
 		function Main() {
